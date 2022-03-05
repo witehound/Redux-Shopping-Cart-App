@@ -7,6 +7,8 @@ import Layout from "./components/Layout";
 function App() {
   const isLoggedIn = useSelector((state)=>state.auth.isLoggedIn)
   console.log(isLoggedIn)
+  const cartState = useSelector((state)=>state.cart.showCart)
+  console.log(cartState)
   return (
     <div className="App">
       {!isLoggedIn &&<Auth />}
